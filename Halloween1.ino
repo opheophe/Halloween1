@@ -106,14 +106,14 @@ void scare_cycle() {
 void loop() {
   int buttonVal = digitalRead(pin_button_1);
   if (buttonVal == HIGH) {
-    Serial.println("Button pressed.");
+    Serial.println("Button pressed");
     scare_cycle();
   }
   int irVal = digitalRead(pin_ir);
 
 
   if (irVal == HIGH) {
-    Serial.println("IR triggered.");
+    Serial.println("IR triggered");
     scare_cycle();
   }
 
