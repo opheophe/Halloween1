@@ -44,7 +44,7 @@ void setup() {
   pinMode(pin_sound, OUTPUT);
   pinMode(pin_eye_1, OUTPUT);
   pinMode(pin_eye_2, OUTPUT);
-  pinMode(pin_button_1, INPUT);
+  pinMode(pin_button_1, INPUT_PULLUP);
   pinMode(pin_ir, INPUT);
   digitalWrite(pin_sound, LOW);
   digitalWrite(pin_eye_1, LOW);
@@ -105,7 +105,7 @@ void scare_cycle() {
 
 void loop() {
   int buttonVal = digitalRead(pin_button_1);
-  if (buttonVal == HIGH) {
+  if (buttonVal == LOW) {
     Serial.println("Button pressed");
     scare_cycle();
   }
